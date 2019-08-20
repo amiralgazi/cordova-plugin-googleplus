@@ -7,12 +7,7 @@ var xcode = require('xcode'),
     util = require('util');
 
 module.exports = function (context) {
-  var Q;
-  try {
-    Q = require('q');
-  } catch (e) {
-    Q = context.requireCordovaModule('q');
-  }
+  var Q = require('q');
 
   var deferral = new Q.defer();
 

@@ -3,12 +3,7 @@ console.error("Google Sign-In prerequisites");
 module.exports = function (context) {
   var child_process = require('child_process');
 
-  var Q;
-  try {
-    Q = require('q');
-  } catch (e) {
-    Q = context.requireCordovaModule('q');
-  }
+  var Q = require('q');
 
   var deferral = Q.defer();
 
